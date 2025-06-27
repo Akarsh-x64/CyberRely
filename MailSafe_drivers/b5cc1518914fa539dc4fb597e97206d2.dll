@@ -1,0 +1,17 @@
+|Steps to activate MailSafe|
+--------------------------------------------------------------------
+-First login to your gmail/google account on any browser.
+
+-Then, go to https://developers.google.com/gmail/api/quickstart/python.
+
+-Then, press the button 'Enable the Gmail API'.
+
+-Follow the steps in the popup. No need to download the credentials.json file on to the computer.
+
+-Then go to your gmail site.Login and the press the settings button on the top right corner <Next to your profile photo>. Then press 'All settings'. Then go to the 'Forwarding and POP/IMAP' tab and press "Enable IMAP". Then press Save Changes.
+
+-Then go to gmail settings and allow less secure apps. This does make your account more vunerable, but we need this to secure your account.
+
+-Then enter the email-id and password in the dialog in our CyberRely(c) app and press 'Activate MailSafe'. We do not give any details about your gmail account, password or even your system to any 3rd party apps including us!
+
+-Note: Once you do this, do not need to activate python API again and again. Just enter email and password and press Activate MailSafe.

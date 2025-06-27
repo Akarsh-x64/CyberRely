@@ -1,0 +1,705 @@
+<MenuScreen>:
+    FloatLayout:
+        Button:
+            text: 'PhishSafe'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'PhishSafe'
+                
+        Button:
+            text: 'VirusSafe'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'VirusSafe'
+                
+        Button:
+            text: 'MailSafe'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'MailSafe'
+                
+        Button:
+            text: 'Encrypt File'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Encrypt'
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        Label: 
+            text: ('Welcome To')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 320
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('Cyber Rely')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 270
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('With this app, we aim to decrease the fatal acts of Cyber crime.')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 220
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('And provide various security features to protect people against ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 195
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('their leak/loss of personal data. For more information, please    ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 170
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('read the ReadMe file located in the same folder as this app.       ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 145
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('“It takes 20 years to build a reputation')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 90
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('and few minutes of cyber-incident to ruin it.”')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 70
+            size_hint: 0.2, 0.2
+
+<PhishSafeScreen>:
+    FloatLayout:
+        Button:
+            text: 'PhishSafe'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'PhishSafe'
+                
+        Button:
+            text: 'VirusSafe'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'VirusSafe'
+                
+        Button:
+            text: 'MailSafe'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'MailSafe'
+                
+        Button:
+            text: 'Encrypt File'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Encrypt'
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        TextInput: 
+            id: url
+            multiline: False
+            hint_text:'Enter URL'
+            pos_hint: {'center_x': 0.6, 'center_y': 0.5} 
+            size_hint: 0.6, 0.1
+            on_text:
+                result.text = ''
+                    
+        Button:
+            id: check_btn
+            text: 'Check'
+            pos: 600, 100
+            size_hint: 0.1, 0.1
+            on_press:
+                url.disabled = True
+                app.check(url.text)
+                        
+        Label:
+            id: hello
+            text: ('CHECK URL')
+            markup: True
+            font_size: '20pt'
+            bold: True
+            pos_hint: {'center_x': 0.40, 'center_y': 0.7}
+            size_hint: 0.4, 0.4
+            
+        Label:
+            id: result
+            text: ('')
+            markup: True
+            font_size: '15pt'
+            bold: True
+            pos_hint: {'center_x': 0.60, 'center_y': 0.11}
+            size_hint: 0.4, 0.4
+            
+        Label:
+            text: ('PhishSafe')
+            markup: True
+            font_size: '32pt'
+            bold: True
+            pos_hint: {'center_x': 0.59, 'center_y': 0.9}
+            size_hint: 0.4, 0.4
+            
+<VirusSafeScreen>:
+    FloatLayout:
+        Button:
+            text: 'PhishSafe'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'PhishSafe'
+                
+        Button:
+            text: 'VirusSafe'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'VirusSafe'
+                
+        Button:
+            text: 'MailSafe'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'MailSafe'
+                
+        Button:
+            text: 'Encrypt File'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Encrypt'
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        TextInput: 
+            id: stats
+            multiline: True
+            readonly: True
+            pos: 160, 180
+            size_hint: 0.6, 0.5
+            
+        Button:
+            text: 'Scan File'
+            pos: 580, 340
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                stats.text = app.scan_me(stats.text)
+                quarantine.text = app.files()
+                
+        Button:
+            text: 'Exempt File'
+            pos: 580, 300
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                stats.text = app.exempt_file(stats.text)
+                
+        Button:
+            text: 'Clear Output'
+            pos: 580, 260
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                stats.text = app.clear()
+                
+        Button:
+            text: 'Quarantine'
+            pos: 580, 220
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                quarantine.text = app.files()
+                
+        Button:
+            text: 'Restore File'
+            pos: 580, 180
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                quarantine.text = app.restore()
+                
+        Button:
+            text: 'Restore all'
+            pos: 580, 140
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                quarantine.text = app.restore_all()
+                
+        Button:
+            text: 'Delete File'
+            pos: 580, 100
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                quarantine.text = app.delete()
+                
+        Button:
+            text: 'Delete All'
+            pos: 580, 60
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                quarantine.text = app.delete_all()
+                
+        Button:
+            text: 'Add file'
+            pos: 580, 20
+            size_hint: 0.17, 0.1
+            disabled: False
+            on_press:
+                quarantine.text = app.add_file()
+                
+        Button:
+            text: 'Cyber certificate'
+            pos: 160, 140
+            size_hint: 0.19, 0.1
+            disabled: False
+            on_press:
+                stats.text = app.certificate(stats.text)
+                
+        Button:
+            text: 'Check certificate'
+            pos: 295, 140
+            size_hint: 0.19, 0.1
+            disabled: False
+            on_press:
+                stats.text = app.check_cer(stats.text)
+                
+        TextInput: 
+            id: quarantine
+            multiline: True
+            readonly: True
+            pos: 160, 20
+            size_hint: 0.6, 0.3
+
+<MailSafeScreen>:
+    FloatLayout:
+        Button:
+            text: 'PhishSafe'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'PhishSafe'
+                
+        Button:
+            text: 'VirusSafe'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'VirusSafe'
+                
+        Button:
+            text: 'MailSafe'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'MailSafe'
+                
+        Button:
+            text: 'Encrypt File'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Encrypt'
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        TextInput: 
+            id: email
+            multiline: False
+            readonly: False
+            hint_text:'Enter your Email'
+            pos: 160, 280
+            size_hint: 0.6, 0.1
+            
+        TextInput: 
+            id: password
+            multiline: False
+            readonly: False
+            password: True
+            hint_text:'Enter your password'
+            pos: 160, 230
+            size_hint: 0.6, 0.1
+            
+        Button:
+            id: hello123
+            text: 'Deactivate Mailsafe'
+            pos: 240, 180
+            size_hint: 0.21, 0.1
+            on_press:
+                app.kill()
+                hello12.disabled = False
+                password.disabled = False
+                email.disabled = False
+            
+        Button:
+            id: hello12
+            text: 'Activate Mailsafe'
+            pos: 555, 180
+            size_hint: 0.2, 0.1
+            on_press:
+                app.mail(email.text, password.text)
+                hello123.disabled = False
+                hello12.disabled = True
+                password.disabled = True
+                email.disabled = True
+            
+        Label: 
+            text: ('MailSafe')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 320
+            size_hint: 0.2, 0.2
+            
+        TextInput: 
+            id: stats2
+            text: ''
+            hint_text:'Click Steps to activate to view'
+            multiline: True
+            readonly: True
+            pos: 160, 10
+            size_hint: 0.6, 0.4
+            
+        Button:
+            id: hello123
+            text: 'Steps to activate'
+            pos: 400, 180
+            size_hint: 0.2, 0.1
+            on_press:
+                stats2.text = app.texts()
+                
+<EncryptScreen>:
+    FloatLayout:
+        Button:
+            text: 'PhishSafe'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'PhishSafe'
+                
+        Button:
+            text: 'VirusSafe'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'VirusSafe'
+                
+        Button:
+            text: 'MailSafe'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'MailSafe'
+                
+        Button:
+            text: 'Encrypt File'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Encrypt'
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        Label: 
+            text: ('ENCRYPT FILE')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 320
+            size_hint: 0.2, 0.2
+            
+        TextInput: 
+            id: file
+            multiline: False
+            readonly: True
+            hint_text:'Choose file'
+            pos: 160, 280
+            size_hint: 0.6, 0.1
+            
+        Button:
+            text: 'Browse'
+            pos: 600, 280
+            size_hint: 0.1, 0.1
+            on_press:
+                file.text = app.encrypt()
+                encrypt1.text = app.en(file.text)
+                decrypt1.text = app.de(file.text)
+        
+        Label: 
+            text: ('|')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 200
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('|')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 164
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('|')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 128
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('|')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 92
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('|')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 56
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('|')
+            font_size: '32pt'
+            markup: True
+            pos: 340, 20
+            size_hint: 0.2, 0.2
+        
+        TextInput: 
+            id: encrypt1
+            multiline: False
+            readonly: True
+            hint_text:'Output Folder (Do not enter)'
+            pos: 160, 200
+            size_hint: 0.33, 0.1
+            
+        TextInput: 
+            id: encrypt2
+            multiline: False
+            readonly: True
+            hint_text:'File Password (Do not enter)'
+            pos: 160, 145
+            size_hint: 0.33, 0.1
+            
+        Button:
+            text: 'Encrypt'
+            pos: 320, 90
+            size_hint: 0.1, 0.1
+            on_press: 
+                encrypt2.text = app.encrypt_run(file.text, encrypt1.text)
+                encrypt2.readonly = False
+                
+        TextInput: 
+            id: decrypt1
+            readonly: True
+            multiline: False
+            hint_text:'Output File(Do not enter)'
+            pos: 430, 200
+            size_hint: 0.33, 0.1
+            
+        TextInput: 
+            id: decrypt2
+            multiline: False
+            hint_text:'Enter Password'
+            pos: 430, 145
+            size_hint: 0.33, 0.1
+            
+        Button:
+            text: 'Decrypt'
+            pos: 590, 90
+            size_hint: 0.1, 0.1
+            on_press: 
+                decrypt2.text = app.decrypt_run(file.text, decrypt2.text)
+                
+<CreditsScreen>:
+    FloatLayout:
+        Button:
+            text: 'PhishSafe'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'PhishSafe'
+                
+        Button:
+            text: 'VirusSafe'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'VirusSafe'
+                
+        Button:
+            text: 'MailSafe'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'MailSafe'
+                
+        Button:
+            text: 'Encrypt File'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Encrypt'
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        Label: 
+            text: ('  Credits  ')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 300
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('   ____________________')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 270
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('The people actively involved in this project were:                         ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 220
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('- Akarsh Sharma                                                                                     ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 195
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('- Aradhya Goel                                                                                         ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 170
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('In case of any query, you can reach out to us through our mail:')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 40
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('CyberRely@outlook.com   ')
+            font_size: '14pt'
+            bold: True
+            markup: True
+            pos: 340, 20
+            size_hint: 0.2, 0.2
